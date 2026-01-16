@@ -21,61 +21,13 @@ The primary business objective of this project is to develop a machine learning-
 
 ## 🏗️ System Architecture
 
-### 1. Data Processing Pipeline
+The system architecture is designed as a robust, end-to-end machine learning pipeline specifically tailored for electricity theft detection. It begins with a comprehensive data processing pipeline that transforms raw 15-minute interval smart meter data into insightful daily consumption profiles. This stage involves sophisticated feature engineering, generating over 30 distinct features that capture critical behavioral patterns. These features quantify statistical properties, rolling temporal statistics across 7, 30, and 90-day windows, pattern consistency through autocorrelation and seasonality, anomaly indicators like sudden drops, and fraud-specific signals such as Benford's Law violations.
 
-* Temporal Aggregation: 15-minute → daily consumption
+To enable supervised learning on a dataset lacking real fraud labels, a realistic theft injection mechanism was implemented, grounded in IEEE research. This mechanism synthetically creates five distinct fraud types with controlled prevalence: Meter Tampering (35%), involving systematic under-recording; Cable Bypass (25%), representing complete meter circumvention; Partial Bypass (20%), for partial load shunting; Time-Based Theft (15%), occurring during specific low-inspection periods; and Gradual Theft (5%), featuring slowly increasing manipulation. These patterns are injected into 5% of the customer base, creating a labeled, imbalanced dataset that mirrors real-world theft distributions.
 
-* Feature Engineering: 30+ engineered features capturing:
+The model architecture employs a strategic ensemble approach to maximize detection performance. The model stack incorporates a Logistic Regression baseline for interpretability and linear pattern capture, a Random Forest classifier to leverage feature importance and non-linear interactions, and an optimized XGBoost model fine-tuned with early stopping for superior gradient-boosting performance. These diverse algorithms are combined into a final Voting Classifier utilizing weighted soft voting, which synthesizes their individual strengths to produce a more robust and accurate prediction than any single model could achieve alone.
 
-1. Statistical properties (mean, std, CV).
-
-2. Rolling statistics (7, 30, 90-day windows).
-
-3. Pattern consistency (autocorrelation, seasonality).
-
-3. Anomaly indicators (outliers, sudden changes).
-
-4. Fraud-specific signals (Benford's Law violations).
-
-### 2. Theft Injection Mechanism
-
-- Realistic patterns based on IEEE research on electricity theft.
-
-- 5 Fraud Types:
-
-    i) Meter Tampering (35%): Systematic under-recording.
-
-    ii) Cable Bypass (25%): Complete meter bypass.
-
-    iii) Partial Bypass (20%): Partial load bypass.
-
-    iv) Time-Based Theft (15%): Theft during specific periods.
-
-    v) Gradual Theft (5%): Slowly increasing theft.
-
-- Controlled Injection: 5% of customers flagged as fraudulent.
-
-### 3. Model Architecture
-
-- Ensemble Approach: Combines multiple algorithms.
-
-- Model Stack:
-
-    * Baseline: Logistic Regression (balanced).
-
-    * Primary: Random Forest (feature importance).
-
-    * Best: XGBoost (optimized with early stopping).
-
-    * Ensemble: Voting classifier with weighted voting.
-
-### 4. Evaluation Framework
-
-    * Primary Metric: F2-Score (emphasizes recall)
-
-    * Business Metrics: Precision@10% (inspection prioritization)
-
-    * Comprehensive Metrics: Accuracy, Precision, Recall, PR-AUC
+Finally, a multi-faceted evaluation framework ensures the solution meets both technical and business requirements. The primary metric is the F2-Score, which deliberately emphasizes recall to minimize missed theft cases—a critical business imperative. Complementary business metrics include Precision@10%, which measures how effectively the model prioritizes the highest-risk customers for field inspections. This is supplemented by comprehensive standard metrics like accuracy, precision, recall, and PR-AUC, providing a holistic view of model performance across all operational dimensions relevant to utility company deployment.
 
 ## 📈 Key Results
 
