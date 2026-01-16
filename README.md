@@ -29,7 +29,7 @@ The model architecture employs a strategic ensemble approach to maximize detecti
 
 Finally, a multi-faceted evaluation framework ensures the solution meets both technical and business requirements. The primary metric is the F2-Score, which deliberately emphasizes recall to minimize missed theft cases—a critical business imperative. Complementary business metrics include Precision@10%, which measures how effectively the model prioritizes the highest-risk customers for field inspections. This is supplemented by comprehensive standard metrics like accuracy, precision, recall, and PR-AUC, providing a holistic view of model performance across all operational dimensions relevant to utility company deployment.
 
-![End-to-end data processing workflow (%)](https://github.com/Sesery/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/global%20consumption.png)
+![End-to-end data processing workflow (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/End-to-end%20data%20processing%20workflow.png){:width="600px"}
 
 ## 📈 Key Results
 
