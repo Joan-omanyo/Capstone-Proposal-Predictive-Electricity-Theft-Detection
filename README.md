@@ -1,3 +1,5 @@
+![Predictive-Electricity-Theft (%)](https://github.com/Sesery/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/global%20consumption.png)
+
 # Capstone-Proposal-Predictive-Electricity-Theft-Detection
 
 ## 📋 Project Overview
@@ -6,15 +8,7 @@ This is an end-to-end machine learning system for detecting electricity theft us
 
 ## Business Objective
 
-Detect electricity theft with high precision and recall, enabling utility companies to:
-
-1. Reduce revenue losses from non-technical losses.
-
-2. Prioritize field inspections efficiently.
-
-3. Implement proactive fraud detection.
-
-4. Improve grid security and operational efficiency.
+The primary business objective of this project is to develop a machine learning-driven system capable of detecting electricity theft with high precision and recall, directly enabling utility companies to reduce revenue losses stemming from non-technical losses. By accurately identifying fraudulent consumption patterns, the system allows for the efficient prioritization of field inspections, ensuring that investigative resources are allocated to the highest-risk cases. This facilitates proactive fraud detection, shifting from reactive investigations to preventative monitoring and timely intervention. Ultimately, the implementation of this solution enhances grid security and operational efficiency, safeguarding revenue, ensuring equitable billing, and contributing to a more stable and reliable electricity distribution infrastructure.
 
 ## 📊 Dataset
 
@@ -24,7 +18,7 @@ Detect electricity theft with high precision and recall, enabling utility compan
 * Processed: Aggregated to daily consumption per meter (540,940 records)in kilowatt-hours.
 
 
-***********image
+![Distribution of sentiment lables (%)]()
 
 ## 🏗️ System Architecture
 
