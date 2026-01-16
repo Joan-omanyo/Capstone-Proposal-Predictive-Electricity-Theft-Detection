@@ -21,7 +21,7 @@ Detect electricity theft with high precision and recall, enabling utility compan
 * Source: UCI ElectricityLoadDiagrams2011-2014.
 * Description: 370 smart meters with 15-minute interval readings from 2011-2014.
 * Original Size: 370 columns × 140,256 time points (~4 years of data).
-* Processed: Aggregated to daily consumption per meter (540,940 records).
+* Processed: Aggregated to daily consumption per meter (540,940 records)in kilowatt-hours.
 
 
 ***********image
