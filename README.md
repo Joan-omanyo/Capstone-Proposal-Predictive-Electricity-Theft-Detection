@@ -23,7 +23,7 @@ The primary business objective of this project is to develop a machine learning-
 
 The system architecture is designed as a robust, end-to-end machine learning pipeline specifically tailored for electricity theft detection. It begins with a comprehensive data processing pipeline that transforms raw 15-minute interval smart meter data into insightful daily consumption profiles. This stage involves sophisticated feature engineering, generating over 30 distinct features that capture critical behavioral patterns. These features quantify statistical properties, rolling temporal statistics across 7, 30, and 90-day windows, pattern consistency through autocorrelation and seasonality, anomaly indicators like sudden drops, and fraud-specific signals such as Benford's Law violations.
 
-![Global distribution of consumption (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/Anomalies.png)
+![Global distribution of consumption (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/Architecture.png)
 
 Correlation analysis reveals two clearly distinct signal groups:
 
