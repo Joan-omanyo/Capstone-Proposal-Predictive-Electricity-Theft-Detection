@@ -23,7 +23,7 @@ The primary business objective of this project is to develop a machine learning-
 
 The system architecture is designed as a robust, end-to-end machine learning pipeline specifically tailored for electricity theft detection. It begins with a comprehensive data processing pipeline that transforms raw 15-minute interval smart meter data into insightful daily consumption profiles. This stage involves sophisticated feature engineering, generating over 30 distinct features that capture critical behavioral patterns. These features quantify statistical properties, rolling temporal statistics across 7, 30, and 90-day windows, pattern consistency through autocorrelation and seasonality, anomaly indicators like sudden drops, and fraud-specific signals such as Benford's Law violations.
 
-![Global distribution of consumption (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/Architecture.png)
+![Global distribution of consumption (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/Anomalies.png)
 
 Correlation analysis reveals two clearly distinct signal groups:
 
@@ -37,7 +37,7 @@ The model architecture employs a strategic ensemble approach to maximize detecti
 
 Finally, a multi-faceted evaluation framework ensures the solution meets both technical and business requirements. The primary metric is the F2-Score, which deliberately emphasizes recall to minimize missed theft cases—a critical business imperative. Complementary business metrics include Precision@10%, which measures how effectively the model prioritizes the highest-risk customers for field inspections. This is supplemented by comprehensive standard metrics like accuracy, precision, recall, and PR-AUC, providing a holistic view of model performance across all operational dimensions relevant to utility company deployment.
 
-![End-to-end data processing workflow (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/End-to-end%20data%20processing%20workflow.png){:width="150px"}
+![Global distribution of consumption (%)](https://github.com/Joan-omanyo/Capstone-Proposal-Predictive-Electricity-Theft-Detection/blob/main/Architecture.png)
 
 ## 📈 Key Results
 The Ensemble model has been selected as the final solution due to its superior performance in identifying energy theft. It achieves the best balance across key metrics, especially by optimizing the F2-Score to prioritize catching as many theft cases as possible (high recall) while maintaining solid precision. With leading PR AUC and a strong Precision@10%, it ensures inspectors can efficiently target the top high-risk accounts, where nearly half of true thefts are found. By combining different model types and carefully tuning its parameters, it effectively handles the rare-event challenge, making it the most reliable and operationally ready choice for deployment.
@@ -97,9 +97,12 @@ This visualization highlights the importance of precision-oriented models and se
 The proposed solution centers on deploying an Ensemble model, which effectively captures the diverse patterns of electricity theft. Operating at an optimized threshold, it targets a highly focused 3.75% of customers, enabling the recovery of KES 13.5 billion annually at minimal cost, achieving an exceptional 71x ROI. To sustain this impact, strategic actions include enriching the dataset with external features, segmenting customers by risk, and implementing a dynamic KPI dashboard for continuous monitoring and evaluation. By prioritizing high-risk inspections and annually adjusting the model, the strategy ensures long-term operational efficiency, minimizes residual losses, and maximizes financial recovery within practical field capacity.
 
 ## 👥 Team & Contact
-Project Lead: [Your Name/Team Name]
-Organization: [Your Organization]
-Email: [Contact Email]
+Kelvin Sesery
+Sharon Thiga
+Victor Wasunna
+Ann Wahu
+Elizabeth Gichure
+Joan Omanyo
 GitHub: [Repository Link]
 
 
