@@ -98,11 +98,17 @@ The proposed solution centers on deploying an Ensemble model, which effectively 
 
 ## 👥 Team & Contact
 Kelvin Sesery
+
 Sharon Thiga
+
 Victor Wasunna
+
 Ann Wahu
+
 Elizabeth Gichure
+
 Joan Omanyo
+
 GitHub: [Repository Link]
 
 
